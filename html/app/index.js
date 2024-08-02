@@ -32,7 +32,7 @@ const uploadFiles = async () => {
   const accountName = matches[1]
   const containerName = matches[2]
   const sasToken = matches[3]
-  const blockSize = chunkSizeSelect.value
+  const blockSize = Number(chunkSizeSelect.value)
 
   reportStatus(`Connect to https://${accountName}.blob.core.windows.net?${sasToken}`)
   const blobServiceClient = new BlobServiceClient(`https://${accountName}.blob.core.windows.net?${sasToken}`);
