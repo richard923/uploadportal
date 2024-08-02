@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload to Azure Blob Storage</title>
+  </head>
+  <body>
+    <h1>Upload a file to Azure</h1>
+    <div style='float: left; padding-right: 10px'>SAS URL: <input type="text" id="sasurl-input"/></div>
+    <select id="chunk-size-select">
+      <option value="1048576">1MB</option>
+      <option value="2097152">2MB</option>
+      <option value="4194304">4MB</option>
+      <option value="8388608">8MB</option>
+      <option value="16777216">16MB</option>
+      <option value="33554432">32MB</option>
+      <option value="67108864">64MB</option>
+      <option value="134217728">128MB</option>
+    </select>
+    <button id="select-button">Select and upload files</button>
+    <input type="file" id="file-input" multiple style="display: none;" />
+    <p><b>Status:</b></p>
+    <p id="status"/>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
